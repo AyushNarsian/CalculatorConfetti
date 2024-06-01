@@ -1,0 +1,225 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:konfetti="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:padding="10dp">
+
+        <nl.dionsegijn.konfetti.xml.KonfettiView
+            android:id="@+id/konfettiView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/workingtxt"
+            android:textAlignment="textEnd"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:text=""
+            android:lines="2"
+            android:maxLines="2"
+            app:layout_constraintBottom_toTopOf="@id/resulttxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/resulttxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:maxLines="1"
+            android:text=""
+            android:textAlignment="textEnd"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/btnnumber"
+            android:onClick="AllClearAction"
+            android:textColor="#fe0190"
+            android:text="AC" />
+
+        <Button
+            style="@style/btnnumber"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="BackspaceAction"
+            android:textColor="#fe0190"
+            android:text="⌫" />
+
+        <Button
+            style="@style/btnconfetti"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/confetti"
+            android:text="C"
+            android:onClick="showConfetti" />
+
+        <Button
+            style="@style/btnoperator"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="operatorAction"
+            android:text="/" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/btnnumber"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="9"
+            android:onClick="numberAction" />
+
+        <Button
+            style="@style/btnnumber"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="8"
+            android:onClick="numberAction" />
+
+        <Button
+            style="@style/btnnumber"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="7"
+            android:onClick="numberAction" />
+
+        <Button
+            style="@style/btnoperator"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="operatorAction"
+            android:text="x" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/btnnumber"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="6"
+            android:onClick="numberAction" />
+
+        <Button
+            style="@style/btnnumber"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="5"
+            android:onClick="numberAction" />
+
+        <Button
+            style="@style/btnnumber"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="4"
+            android:onClick="numberAction" />
+
+        <Button
+            style="@style/btnoperator"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="operatorAction"
+            android:text="+" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/btnnumber"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="3"
+            android:onClick="numberAction" />
+
+        <Button
+            style="@style/btnnumber"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="2"
+            android:onClick="numberAction" />
+
+        <Button
+            style="@style/btnnumber"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="1"
+            android:onClick="numberAction" />
+
+        <Button
+            style="@style/btnoperator"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="operatorAction"
+            android:text="-" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            style="@style/btnnumber"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="."
+            android:onClick="numberAction" />
+
+        <Button
+            style="@style/btnnumber"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:onClick="numberAction" />
+
+        <Button
+            style="@style/btnoperator"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:onClick="onEqual"
+            android:text="=" />
+    </LinearLayout>
+
+</LinearLayout>
